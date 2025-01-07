@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    // Correct use of innerHTML. We will create a valid string literal before assigning to innerHTML
+    let newParagraph = "<p>This text is also visible.</p><p>This text is now visible</p>";
+    document.getElementById("myDiv").innerHTML += newParagraph;
+  </script>
+</body>
+</html>
